@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sivuston muokkaus</title>
+  <meta name="robots" content="noindex">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="h-screen flex flex-col bg-slate-100 text-slate-800">
+
+  <!-- Yläpalkki: projektit ja lataukset -->
+  <header class="bg-slate-900 text-white px-4 py-2 flex flex-wrap items-center gap-2">
+    <h1 class="font-bold mr-2">🛠️ Kotisivueditori</h1>
+
+    <label for="projectSelect" class="sr-only">Projekti</label>
+    <select id="projectSelect" class="top-select"></select>
+    <button id="btnNewProject" class="btn-accent">＋ Uusi projekti</button>
+
+    <details id="projectMenu" class="relative">
+      <summary class="btn-small">⋯ Projekti</summary>
+      <div class="menu">
+        <button id="btnRename" type="button">✏️ Nimeä projekti uudelleen</button>
+        <button id="btnDuplicate" type="button">📄 Kopioi projekti</button>
+        <button id="btnExportJson" type="button">💾 Tallenna varmuuskopio (.json)</button>
+        <button id="btnImportJson" type="button">📂 Avaa varmuuskopio</button>
+        <button id="btnDeleteProject" type="button" class="danger-text">🗑️ Poista projekti</button>
+      </div>
+    </details>
+    <input type="file" id="importFile" accept=".json,application/json" hidden />
+
+    <div class="ml-auto flex flex-wrap items-center gap-2">
+      <button id="btnDesktop" class="btn-small" title="Työpöytänäkymä">🖥️</button>
+      <button id="btnTablet" class="btn-small" title="Tablettinäkymä">📋</button>
+      <button id="btnMobile" class="btn-small" title="Puhelinnäkymä (hampurilaisvalikko)">📱</button>
+      <button id="btnDownloadPage" class="btn-small">⬇ Tämä sivu</button>
+      <button id="btnDownloadZip" class="btn-green">⬇ Lataa koko sivusto (ZIP)</button>
+    </div>
+  </header>
+
+  <!-- Sivut -->
+  <div class="bg-white border-b border-slate-200 px-4 py-2 flex items-center gap-2 overflow-x-auto">
+    <div id="pageChips" class="flex gap-2"></div>
+    <button id="btnAddPage" class="chip chip-add">＋ Lisää sivu</button>
+  </div>
+
+  <!-- Pääalue -->
+  <main class="flex-1 flex min-h-0">
+    <aside class="w-96 max-w-[45%] bg-white border-r border-slate-200 flex flex-col min-h-0">
+      <div id="sideTabs" class="flex border-b border-slate-200">
+        <button class="side-tab" data-tab="blocks">🧱 Lohkot</button>
+        <button class="side-tab" data-tab="page">📄 Sivu</button>
+        <button class="side-tab" data-tab="site">🎨 Sivusto</button>
+      </div>
+      <div id="panel" class="flex-1 overflow-y-auto p-4"></div>
+    </aside>
+
+    <section class="flex-1 bg-slate-300 p-4 flex justify-center overflow-auto">
+      <iframe id="preview" title="Esikatselu"
+        class="bg-white shadow-lg h-full rounded transition-all duration-200" style="width:100%"></iframe>
+    </section>
+  </main>
+
+  <!-- Uusi projekti -->
+  <dialog id="dlgNew" class="dlg">
+    <form id="formNew">
+      <h2 class="text-xl font-bold mb-4">Uusi projekti</h2>
+
+      <label class="field-label" for="newName">Projektin / sivuston nimi</label>
+      <input id="newName" class="field-input" type="text" value="Uusi sivusto" required />
+
+      <p class="field-label mt-4">Aloituspohja</p>
+      <div id="starterList" class="grid gap-2"></div>
+
+      <label class="field-label mt-4" for="newLang">Sivuston kieli</label>
+      <select id="newLang" class="field-input">
+        <option value="fi">Suomi</option>
+        <option value="en">English</option>
+      </select>
+      <span class="field-hint">Toisen kieliversion voi lisätä myöhemmin kohdassa "Sivusto".</span>
+
+      <label class="field-label mt-4" for="newTheme">Väriteema</label>
+      <select id="newTheme" class="field-input"></select>
+      <span class="field-hint">Voit vaihtaa teeman myöhemmin kohdassa "Sivusto".</span>
+
+      <div class="flex justify-end gap-2 mt-6">
+        <button type="button" id="newCancel" class="btn-plain">Peruuta</button>
+        <button type="submit" class="btn-primary">Luo projekti</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Lisää sivu -->
+  <dialog id="dlgPage" class="dlg">
+    <h2 class="text-xl font-bold mb-1">Lisää sivu</h2>
+    <p class="text-sm text-slate-500 mb-4">Valitse pohja. Voit muokata, poistaa ja lisätä lohkoja vapaasti sen jälkeen.</p>
+    <div id="pageLangBox" class="mb-3"></div>
+    <div id="pageTypeList" class="grid gap-2 sm:grid-cols-2"></div>
+    <div class="flex justify-end mt-5">
+      <button type="button" id="pageCancel" class="btn-plain">Peruuta</button>
+    </div>
+  </dialog>
+
+  <!-- Emoji- ja linkkiponnahdus (täytetään koodilla) -->
+  <div id="pop" class="pop" hidden></div>
+
+  <div id="toast" class="toast" hidden></div>
+  <script>window.KK_CLIENT = 1;</script>
+  <script src="script.js"></script>
+</body>
+</html>
