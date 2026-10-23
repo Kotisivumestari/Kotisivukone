@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mobiiliystävälliset sivut | KK Visuals</title>
+<meta name="description" content="Hanki yrityksellesi nykyaikaiset ja mobiiliystävälliset sivut, jotka toimivat moitteettomasti puhelimella. Ota yhteyttä ja aloita!">
+<meta name="keywords" content="mobiiliystävälliset sivut, kotisivut yritykselle, uudet kotisivut, KK Visuals, responsiiviset sivut, verkkosivut">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KK Visuals">
+<meta property="og:title" content="Mobiiliystävälliset sivut | KK Visuals">
+<meta property="og:description" content="Hanki yrityksellesi nykyaikaiset ja mobiiliystävälliset sivut, jotka toimivat moitteettomasti puhelimella. Ota yhteyttä ja aloita!">
+<meta property="og:locale" content="fi_FI">
+<meta name="twitter:card" content="summary">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Montserrat:wght@400;600;700;800&display=swap">
+<style>
+:root{--f-body:"Open Sans",sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--f-head:"Montserrat",sans-serif,"Open Sans",sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--f-nav:"Montserrat",sans-serif,"Open Sans",sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--f-btn:"Montserrat",sans-serif,"Open Sans",sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--bg:#0a0a0a;--surface:#171717;--text:#fafafa;--accent:#ffffff;--accentText:#0a0a0a;
+--line-base:color-mix(in srgb,var(--text) 15%,transparent);--muted-base:color-mix(in srgb,var(--text) 68%,transparent);
+--line:var(--line-base);--muted:var(--muted-base)}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--f-body);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+main{flex:1;display:block}
+a{color:inherit}
+img{max-width:100%}
+h1,h2,h3{line-height:1.2;font-family:var(--f-head)}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+.muted{color:var(--muted)}
+.small{font-size:.9rem}
+.center{text-align:center}
+.nowrap{white-space:nowrap}
+.right{text-align:right}
+
+/* Yläpalkki */
+.site-header{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:20}
+.site-header .wrap{padding-top:.85rem;padding-bottom:.85rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem}
+.brand{font-family:var(--f-nav);display:flex;align-items:center;gap:.7rem;font-weight:800;font-size:1.25rem;text-decoration:none}
+.logo{display:block;width:auto;max-width:14rem;object-fit:contain}
+.nav{font-family:var(--f-nav);display:flex;flex-wrap:wrap;gap:1.4rem;font-size:.95rem}
+.nav a{text-decoration:none;opacity:.72;padding-bottom:2px;border-bottom:2px solid transparent}
+.nav a:hover{opacity:1}
+.nav a.active{opacity:1;border-bottom-color:var(--accent)}
+.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:2.7rem;height:2.7rem;padding:0 .65rem;background:none;border:1px solid var(--line);border-radius:.6rem;cursor:pointer}
+.nav-toggle span{display:block;height:2px;border-radius:2px;background:var(--text);transition:transform .2s,opacity .2s}
+.site-header.open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.site-header.open .nav-toggle span:nth-child(2){opacity:0}
+.site-header.open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:720px){
+  .nav-toggle{display:flex}
+  .nav{display:none;width:100%;flex-direction:column;gap:0}
+  .site-header.open .nav{display:flex}
+  .nav a{padding:.85rem 0;border-bottom:1px solid var(--line);opacity:1}
+  .nav a.active{border-bottom-color:var(--accent)}
+}
+
+/* Lohkot */
+.blk{position:relative;width:min(68rem,calc(100% - 2rem));margin:0 auto;overflow:hidden}
+.blk.full{width:100%}
+.blk.has-bg:not(.full){border-radius:1rem;margin-top:.75rem;margin-bottom:.75rem}
+.blk-img,.blk-layer{position:absolute;inset:0;pointer-events:none}
+.blk-img{background-size:cover;background-position:center}
+.blk-inner{position:relative;z-index:1;max-width:68rem;margin:0 auto;padding:var(--py) 1.5rem}
+.pad-none{--py:0}.pad-sm{--py:1rem}.pad-md{--py:2.25rem}.pad-lg{--py:4.5rem}
+.blk.full.edge .blk-inner{max-width:none;padding-left:0;padding-right:0}
+.blk.full.edge .ov{border-radius:0}
+.ph{border:2px dashed var(--line);border-radius:1rem;padding:1.8rem;text-align:center;color:var(--muted)}
+
+.card{background:var(--surface);color:var(--text);--muted:var(--muted-base);--line:var(--line-base);border:1px solid var(--line);border-radius:1rem;padding:1.5rem}
+.card-title{font-size:1.2rem;font-weight:700;margin:0 0 .5rem}
+.card-title.big{font-size:1.6rem;margin-bottom:1rem}
+.card p{margin:0}
+a.card-link{display:block;text-decoration:none}
+a.card-link:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.hd{font-weight:800;margin:0}
+h1.hd{font-size:clamp(2rem,5vw,3rem)}h2.hd{font-size:clamp(1.5rem,3.5vw,2.1rem)}h3.hd{font-size:1.3rem}
+.pagetitle{font-size:clamp(2rem,5vw,3rem);font-weight:800;margin:0}
+.lead{font-size:1.15rem;margin:.75rem 0 0;max-width:42rem}
+.center-title{font-size:1.9rem;font-weight:800;text-align:center;margin:0 0 2rem}
+.center-title.small-title{font-size:1.05rem;margin-bottom:1rem}
+.narrow-col{max-width:46rem;margin:0 auto}
+.divider{border:0;border-top:1px solid var(--line);margin:0 auto}
+.grid-auto{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.g-2{grid-template-columns:repeat(2,1fr)}.g-3{grid-template-columns:repeat(3,1fr)}.g-4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:760px){.g-2,.g-3,.g-4{grid-template-columns:1fr}}
+
+.btn{display:inline-block;background:var(--accent);color:var(--accentText);padding:.8rem 1.6rem;border-radius:.6rem;font-weight:600;text-decoration:none;border:2px solid var(--accent);cursor:pointer;font-size:1rem;font-family:var(--f-btn);margin:.2rem}
+.btn:hover{opacity:.88}
+.btn.lg{padding:1rem 2.2rem;font-size:1.15rem}
+.btn.outline{background:transparent;color:inherit;border-color:currentColor}
+.on-accent .btn{background:var(--accentText);color:var(--accent);border-color:var(--accentText)}
+.on-accent .btn.outline{background:transparent;color:inherit;border-color:currentColor}
+
+.hero{max-width:52rem;margin:0 auto}
+.hero h1{font-size:clamp(2.2rem,6vw,3.8rem);font-weight:800;margin:0 0 1.2rem}
+.hero p{font-size:1.2rem;margin:0 0 2rem}
+.cta{text-align:center;max-width:40rem;margin:0 auto}
+.cta h2{font-size:2rem;margin:0 0 .6rem}
+.cta p{margin:0 0 1.8rem;opacity:.92}
+.prose p{margin:0 0 1.1rem;line-height:1.85;font-size:1.05rem}
+.prose p:last-child{margin-bottom:0}
+.prose h2{font-size:1.4rem;font-weight:700;margin:2rem 0 .6rem}
+.prose h2:first-child{margin-top:0}
+.field{width:100%;padding:.75rem 1rem;border-radius:.6rem;border:1px solid var(--line-base);background:var(--surface);color:var(--text);font:inherit}
+.fig{margin:0}.fig figcaption{margin-top:.5rem;text-align:center}
+.bar{height:.5rem;border-radius:9999px;background:var(--line-base)}
+.bar i{display:block;height:100%;border-radius:9999px;background:var(--accent)}
+.skills{width:100%;border-collapse:collapse}
+.skills td{padding:.8rem .6rem;border-top:1px solid var(--line-base)}
+.skills tr:first-child td{border-top:0}
+.blog-grid{display:grid;gap:3rem;grid-template-columns:1fr}
+.contact-grid{display:grid;gap:2rem;grid-template-columns:1fr}
+@media(min-width:800px){.blog-grid:not(.no-side){grid-template-columns:1fr 16rem}.contact-grid{grid-template-columns:1fr 1fr}}
+.article-title{font-size:clamp(2rem,5vw,2.8rem);font-weight:800;margin:0 0 .5rem}
+.article-body{margin-top:1.5rem}
+.side-links{list-style:none;padding:0;margin:1.25rem .25rem;display:grid;gap:.6rem}
+.stats{text-align:center}
+.stat-num{font-size:2.6rem;font-weight:800}
+.plan{display:flex;flex-direction:column}
+.plan-featured{border:2px solid var(--accent)}
+.price{font-size:2rem;font-weight:800;margin:.25rem 0 1rem}
+.plan ul{list-style:none;padding:0;margin:0 0 1.5rem;flex:1}
+.plan li{padding:.45rem 0;border-top:1px solid var(--line)}
+.plan li::before{content:"✓  "}
+.plan .btn{text-align:center}
+.avatar{width:4rem;height:4rem;border-radius:50%;background:var(--accent);color:var(--accentText);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.2rem;margin-bottom:1rem}
+.role{font-weight:600;margin:0 0 .6rem!important}
+.faq{padding:1rem 1.25rem;margin-bottom:.75rem}
+.faq summary{cursor:pointer;font-weight:600}
+.faq p{margin:.75rem 0 0!important}
+.contact-grid .card p{margin:0 0 1.2rem}
+.contact-grid .card p:last-child{margin:0}
+
+/* Kuva + teksti päälle */
+.ov{position:relative;display:flex;border-radius:1rem;overflow:hidden;background-size:cover;background-position:center;padding:2rem}
+.ov-dim{position:absolute;inset:0;background:#000;pointer-events:none}
+.ov-link{position:absolute;inset:0;z-index:1}
+.ov-box{position:relative;z-index:2;max-width:34rem;padding:1.5rem 1.8rem;border-radius:.9rem}
+.ov-box h2{margin:0 0 .5rem;font-size:clamp(1.5rem,4vw,2.4rem)}
+.ov-box p{margin:0 0 1rem}
+.ov-box p:last-child,.ov-box h2:last-child{margin-bottom:0}
+@media(max-width:600px){.ov{padding:1rem}.ov-box{padding:1.1rem 1.2rem}}
+
+/* Somenapit ja Instagram */
+.social{display:flex;flex-wrap:wrap;gap:.6rem}
+.soc{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;width:2.9rem;height:2.9rem;border-radius:50%;background:var(--accent);color:var(--accentText);text-decoration:none;font-size:.95rem;font-weight:600}
+.soc svg{width:55%;height:55%;flex:none}
+.soc:hover{opacity:.85;transform:translateY(-2px)}
+.s-sm .soc{width:2.2rem;height:2.2rem}.s-lg .soc{width:3.6rem;height:3.6rem}
+.social.pill .soc{width:auto;height:auto;border-radius:9999px;padding:.55rem 1.1rem}
+.social.pill .soc svg{width:1.2rem;height:1.2rem}
+.on-accent .soc{background:var(--accentText);color:var(--accent)}
+.ig{text-align:center}
+.ig iframe{width:100%;max-width:540px;border:0;border-radius:.75rem;background:#fff}
+
+/* Vierekkäin: rivi, galleria, nappirivi */
+.blk-row{width:min(68rem,calc(100% - 2rem));margin:0 auto;display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center}
+.blk-row>.blk{flex:1 1 12rem;width:auto;min-width:0}
+.blk-row>.blk:not(.has-bg) .blk-inner{padding-left:0;padding-right:0}
+.gal{display:grid;gap:1rem;grid-template-columns:repeat(var(--n,3),1fr)}
+.gal img{width:100%;display:block}
+.gal a,.gal div{display:block;min-width:0}
+.gal.square img{aspect-ratio:1;object-fit:cover}
+.gal.wide img{aspect-ratio:4/3;object-fit:cover}
+@media(max-width:640px){.gal{grid-template-columns:repeat(2,1fr)}}
+/* Yhdistetty osio */
+.blk-part+.blk-part,.blk-part+.blk-row-in,.blk-row-in+.blk-part,.blk-row-in+.blk-row-in{margin-top:1.25rem}
+.blk-row-in{display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center}
+.blk-row-in>.blk-part{flex:1 1 12rem;min-width:0}
+.blk-row.keep,.blk-row-in.keep{flex-wrap:nowrap;gap:.75rem}
+.blk-row.keep>.blk,.blk-row-in.keep>.blk-part{flex:1 1 0}
+.blk-row.keep .btn,.blk-row-in.keep .btn{padding-left:.7rem;padding-right:.7rem;max-width:100%}
+/* Liikkuvat referenssit */
+.mq{overflow:hidden}
+.mq.fade{-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.mq-track{display:flex;width:max-content;animation:mq-run var(--dur,30s) linear infinite}
+.mq.rev .mq-track{animation-direction:reverse}
+.mq.pause:hover .mq-track,.mq-track:focus-within{animation-play-state:paused}
+.mq-set{display:flex;flex:none;gap:1.25rem;padding-right:1.25rem;align-items:center}
+.mq-it{flex:none;display:block;width:var(--w,11rem);color:inherit;text-decoration:none}
+.mq-it.card{background:var(--surface);border:1px solid var(--line);border-radius:1rem;padding:.8rem}
+.mq-it img{display:block;width:100%;border-radius:.6rem}
+.mq.contain img{aspect-ratio:3/2;object-fit:contain}
+.mq.square img{aspect-ratio:1;object-fit:cover}
+.mq.gray img{filter:grayscale(1);opacity:.8;transition:filter .2s,opacity .2s}
+.mq.gray .mq-it:hover img{filter:none;opacity:1}
+.mq-cap{display:block;margin-top:.6rem;text-align:center}
+.mq-cap strong{display:block}
+.mq-tx{display:block;font-size:.88rem;color:var(--muted);margin-top:.15rem}
+@keyframes mq-run{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.mq{overflow-x:auto}.mq-track{animation:none}.mq-set+.mq-set{display:none}}
+.btn-row{display:flex;flex-wrap:wrap;gap:.6rem}
+.btn-row .btn{margin:0}
+
+/* Evästekysely */
+[hidden]{display:none!important}
+.cookie{position:fixed;left:1rem;right:1rem;bottom:1rem;z-index:50;max-width:46rem;margin:0 auto;background:var(--surface);color:var(--text);border:1px solid var(--line-base);border-radius:1rem;padding:1.1rem 1.3rem;box-shadow:0 10px 40px rgba(0,0,0,.28);display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between}
+.cookie p{margin:0;flex:1 1 20rem;font-size:.92rem;line-height:1.5}
+.cookie .btn{padding:.55rem 1.1rem;font-size:.92rem;margin:.15rem}
+.consent-ph{border:2px dashed var(--line);border-radius:1rem;padding:1.6rem;text-align:center}
+.consent-ph p{margin:0 0 1rem}
+.linklike{background:none;border:0;color:inherit;text-decoration:underline;cursor:pointer;font:inherit;padding:0}
+.lang{font-weight:700;letter-spacing:.04em;border:1px solid var(--line);border-radius:.4rem;padding:.1rem .5rem!important;border-bottom-width:1px!important}
+
+/* Alatunniste */
+.site-footer{border-top:1px solid var(--line);margin-top:4rem;padding:2rem 0;font-size:.9rem;color:var(--muted)}
+.site-footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem}
+.site-footer nav{display:flex;gap:1.2rem;flex-wrap:wrap}
+
+html{font-size:93.75%}
+.btn,.field,.nav-toggle{border-radius:0}.card,.ov,.ph,.consent-ph,.cookie,.blk.has-bg:not(.full){border-radius:0}.ov-box{border-radius:0}
+.site-header{--hbg:color-mix(in srgb,var(--surface) 68%,transparent);--hsolid:var(--surface);--htext:var(--text);background:var(--hbg);color:var(--htext);position:sticky;top:0;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border-bottom:1px solid color-mix(in srgb,var(--text) 18%,transparent);box-shadow:none}
+.site-header .wrap{padding-top:14px;padding-bottom:14px}
+.nav-toggle span{background:var(--htext)}.nav-toggle{border-color:color-mix(in srgb,var(--htext) 30%,transparent)}
+.nav{font-size:15px;gap:22px}
+.brand{}
+.nav a.active{border-bottom-color:transparent;font-weight:700}
+.nav a{border-bottom-color:transparent}
+@media(min-width:721px){
+.site-header .wrap{flex-direction:column;justify-content:center;text-align:center;gap:.5rem}.nav{justify-content:center}
+}
+@media(max-width:720px){.site-header.open{background:var(--hsolid)}}
+</style>
+
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="index.html"><span>KK Visuals</span></a>
+  <button class="nav-toggle" type="button" aria-label="Avaa valikko" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="nav"><a href="index.html">Etusivu</a><a href="mobiiliystavalliset-sivut.html" class="active">Mobiiliystävälliset sivut</a><a href="yksinkertaisuus.html">Yksinkertaisuus</a></nav>
+</div></header>
+<main>
+<div class="blk pad-none"><div class="blk-inner"><h3 class="hd" style="text-align:center">Miksi uusi kotisivu?</h3></div></div>
+<div class="blk pad-sm"><div class="blk-inner"><div class="narrow-col"><div style="text-align:left"><div class="prose"><p>Nykyaikaiset kotisivut ovat liiketoimintasi tärkein käyntikortti. Suurin osa verkroliikenteestä tapahtuu mobiilissa, joten sivujen on toimittava puhelimella moitteettomasti. Hyvä sivusto toimii myös digitaalisena solmukohtana: se ohjaa asiakkaan suoraan myös muihin viestintäkanaviisi, kuten WhatsAppiin tai Instagramiin.</p></div></div></div></div></div>
+<div class="blk pad-none"><div class="blk-inner"><div class="blk-row-in"><div class="blk-part"><figure class="fig" style="width:51%;margin:0 auto"><img src="images/4jo3ymg.png" alt="" style="width:100%;display:block;border-radius:1rem;"></figure></div><div class="blk-part"><div style="text-align:left"><div class="prose"><h2>Mitä tarkoittaa mobiiliystävällinen?</h2><p>Mobiiliystävällinen nettisivu mukautuu täydellisesti kaikenkokoisille näytöille. Koska yli puolet asiakkaistasi selaa verkkoa puhelimella, toimiva mobiilisivu varmistaa, ettet menetä yhtäkään kauppaa nopeuden, selkeyden tai helppokäyttöisyyden puutteen vuoksi.</p></div></div></div></div></div></div>
+<div class="blk pad-md"><div class="blk-inner"><div class="narrow-col"><details class="card faq"><summary>Miten pääsen alkuun?</summary><p class="muted">Ota yhteyttä meihin, niin sovimme, että minkälaiset sivustot yrityksellesi rakennetaan.</p></details><details class="card faq"><summary>Miten voin olla varma, että sivut toimivat myös mobiilissa?</summary><p class="muted">Ennen julkaisua katsotaan yhdessä läpi sivuston toimivuus myös suoraan puhelimelta.</p></details></div></div></div>
+<div class="blk pad-md"><div class="blk-inner"><div class="blk-row-in keep"><div class="blk-part"><div class="narrow-col"><div style="text-align:center"><div class="prose"><p>Lataa puhelimeesi tästä:</p></div></div></div></div><div class="blk-part"><div style="text-align:center"><a class="btn lg" href="#">Lataa</a></div></div></div></div></div>
+</main>
+<footer class="site-footer"><div class="wrap">
+  <span>© 2026 KK Visuals. Kaikki oikeudet pidätetään.</span><div class="social s-sm" style="justify-content:flex-start"><a class="soc" href="https://instagram.com/kk_visuals" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></div><nav></nav>
+</div></footer>
+
+<script>(function(){var b=document.querySelector('.nav-toggle'),h=document.querySelector('.site-header');if(!b||!h)return;b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});})();</script>
+
+</body>
+</html>
