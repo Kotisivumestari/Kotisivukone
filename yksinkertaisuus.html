@@ -131,6 +131,19 @@ h1.hd{font-size:clamp(2rem,5vw,3rem)}h2.hd{font-size:clamp(1.5rem,3.5vw,2.1rem)}
 .faq p{margin:.75rem 0 0!important}
 .contact-grid .card p{margin:0 0 1.2rem}
 .contact-grid .card p:last-child{margin:0}
+.kform{display:grid;gap:1.1rem}
+.kform .kf{display:grid;gap:.4rem}
+.kform label,.kform legend{font-weight:600;font-size:.92rem}
+.kform fieldset{border:0;margin:0;padding:0;display:grid;gap:.5rem}
+.kform legend{padding:0;margin-bottom:.4rem}
+.kform .kf-opt{display:flex;align-items:center;gap:.55rem;font-weight:400;cursor:pointer}
+.kform .kf-opt input{width:1.1rem;height:1.1rem;accent-color:var(--accent);flex:none}
+.kform .req{color:#dc2626}
+.kform .kf-hp{display:none!important}
+.kform .kf-msg{margin:0;padding:.8rem 1rem;border-radius:.6rem;font-size:.95rem}
+.kform .kf-msg.ok{background:#dcfce7;color:#14532d}.kform .kf-msg.err{background:#fee2e2;color:#7f1d1d}
+.kform button[disabled]{opacity:.6;cursor:wait}
+.kform .btn{justify-self:start}
 
 /* Kuva + teksti päälle */
 .ov{position:relative;display:flex;border-radius:1rem;overflow:hidden;background-size:cover;background-position:center;padding:2rem}
@@ -207,6 +220,8 @@ h1.hd{font-size:clamp(2rem,5vw,3rem)}h2.hd{font-size:clamp(1.5rem,3.5vw,2.1rem)}
 .site-footer{border-top:1px solid var(--line);margin-top:4rem;padding:2rem 0;font-size:.9rem;color:var(--muted)}
 .site-footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem}
 .site-footer nav{display:flex;gap:1.2rem;flex-wrap:wrap}
+.site-footer .foot-info{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:1.5rem;align-items:start;justify-content:stretch;padding-bottom:1.5rem;margin-bottom:1.5rem;border-bottom:1px solid var(--line);line-height:1.5}
+.foot-info strong{color:var(--text)}.foot-info a{color:inherit}
 
 html{font-size:93.75%}
 .btn,.field,.nav-toggle{border-radius:0}.card,.ov,.ph,.consent-ph,.cookie,.blk.has-bg:not(.full){border-radius:0}.ov-box{border-radius:0}

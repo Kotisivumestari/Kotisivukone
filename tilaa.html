@@ -131,6 +131,19 @@ h1.hd{font-size:clamp(2rem,5vw,3rem)}h2.hd{font-size:clamp(1.5rem,3.5vw,2.1rem)}
 .faq p{margin:.75rem 0 0!important}
 .contact-grid .card p{margin:0 0 1.2rem}
 .contact-grid .card p:last-child{margin:0}
+.kform{display:grid;gap:1.1rem}
+.kform .kf{display:grid;gap:.4rem}
+.kform label,.kform legend{font-weight:600;font-size:.92rem}
+.kform fieldset{border:0;margin:0;padding:0;display:grid;gap:.5rem}
+.kform legend{padding:0;margin-bottom:.4rem}
+.kform .kf-opt{display:flex;align-items:center;gap:.55rem;font-weight:400;cursor:pointer}
+.kform .kf-opt input{width:1.1rem;height:1.1rem;accent-color:var(--accent);flex:none}
+.kform .req{color:#dc2626}
+.kform .kf-hp{display:none!important}
+.kform .kf-msg{margin:0;padding:.8rem 1rem;border-radius:.6rem;font-size:.95rem}
+.kform .kf-msg.ok{background:#dcfce7;color:#14532d}.kform .kf-msg.err{background:#fee2e2;color:#7f1d1d}
+.kform button[disabled]{opacity:.6;cursor:wait}
+.kform .btn{justify-self:start}
 
 /* Kuva + teksti päälle */
 .ov{position:relative;display:flex;border-radius:1rem;overflow:hidden;background-size:cover;background-position:center;padding:2rem}
@@ -207,6 +220,8 @@ h1.hd{font-size:clamp(2rem,5vw,3rem)}h2.hd{font-size:clamp(1.5rem,3.5vw,2.1rem)}
 .site-footer{border-top:1px solid var(--line);margin-top:4rem;padding:2rem 0;font-size:.9rem;color:var(--muted)}
 .site-footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem}
 .site-footer nav{display:flex;gap:1.2rem;flex-wrap:wrap}
+.site-footer .foot-info{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:1.5rem;align-items:start;justify-content:stretch;padding-bottom:1.5rem;margin-bottom:1.5rem;border-bottom:1px solid var(--line);line-height:1.5}
+.foot-info strong{color:var(--text)}.foot-info a{color:inherit}
 
 html{font-size:93.75%}
 .btn,.field,.nav-toggle{border-radius:0}.card,.ov,.ph,.consent-ph,.cookie,.blk.has-bg:not(.full){border-radius:0}.ov-box{border-radius:0}
@@ -233,19 +248,51 @@ html{font-size:93.75%}
 <main>
 <div class="blk pad-sm"><div class="blk-inner"><h2 class="hd" style="text-align:center">Tilaa</h2></div></div>
 <div class="blk pad-md"><div class="blk-inner"><div class="narrow-col"><div style="text-align:left"><div class="prose"><p>Kaikkiin paketteihin sisältyy SEO, Mobiiliystävällinen muotoilu.</p></div></div></div></div></div>
-<div class="blk pad-md"><div class="blk-inner"><div class="narrow-col">
-<form action="mailto:info@example.com" method="post" enctype="text/plain" style="display:grid;gap:1rem">
-  <input class="field" type="text" name="Nimesi" placeholder="Nimesi" required>
-  <input class="field" type="email" name="Sähköposti" placeholder="Sähköpostisi" required>
-  <textarea class="field" name="Viestisi" rows="5" placeholder="Viestisi" required></textarea>
-  <button class="btn" type="submit">Lähetä viesti</button>
-</form></div></div></div>
+<div class="blk pad-md"><div class="blk-inner"><div class="narrow-col"><h2 class="center-title">Lähetä viesti</h2><form class="kform" data-key="3a3d0862-b0c9-4575-9e21-9c8fd6ef973a" data-mail="info@example.com" data-subject="Peruspaketin tilaus" data-site="Koodu " data-ok="Kiitos! Viestisi on lähetetty. Vastaamme pian." data-err="Lähetys epäonnistui. Yritä uudelleen tai ota yhteyttä sähköpostilla." data-req="Täytä kaikki pakolliset kentät." data-pre="Esikatselu: lomaketta ei lähetetä oikeasti." data-opening="Avataan sähköpostiohjelma…"><div class="kf" data-f data-t="text" data-l="Nimesi" data-r="1" data-y="Kyllä" data-n="Ei"><label for="kf35_0">Nimesi <span class="req" aria-hidden="true">*</span></label><input class="field" type="text" id="kf35_0" required></div><div class="kf" data-f data-t="email" data-l="Sähköpostisi" data-r="1" data-y="Kyllä" data-n="Ei"><label for="kf35_1">Sähköpostisi <span class="req" aria-hidden="true">*</span></label><input class="field" type="email" id="kf35_1" required autocomplete="email"></div><div class="kf" data-f data-t="select" data-l="Mikä paketti?" data-r="1" data-y="Kyllä" data-n="Ei"><label for="kf35_2">Mikä paketti? <span class="req" aria-hidden="true">*</span></label><select class="field" id="kf35_2" required><option value="">–</option><option>Perus 299€</option><option>Pro 399€</option></select></div><div class="kf" data-f data-t="textarea" data-l="Viestisi" data-r="1" data-y="Kyllä" data-n="Ei"><label for="kf35_3">Viestisi <span class="req" aria-hidden="true">*</span></label><textarea class="field" id="kf35_3" rows="5" required></textarea></div><input type="checkbox" name="botcheck" class="kf-hp" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn" type="submit">Lähetä viesti</button><p class="kf-msg" role="status" aria-live="polite" hidden></p></form></div></div></div>
 </main>
 <footer class="site-footer"><div class="wrap">
   <span>© 2026 KK Visuals. Kaikki oikeudet pidätetään.</span><div class="social s-sm" style="justify-content:flex-start"><a class="soc" href="https://instagram.com/kk_visuals" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></div><nav></nav>
 </div></footer>
 
-<script>(function(){var b=document.querySelector('.nav-toggle'),h=document.querySelector('.site-header');if(!b||!h)return;b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});})();</script>
+<script>(function(){var b=document.querySelector('.nav-toggle'),h=document.querySelector('.site-header');if(!b||!h)return;b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});})();</script><script>(function(){
+var RES={access_key:1,subject:1,from_name:1,botcheck:1,email:1,replyto:1,redirect:1,ccemail:1};
+document.querySelectorAll('form.kform').forEach(function(f){
+f.addEventListener('submit',function(e){
+e.preventDefault();
+var msg=f.querySelector('.kf-msg'),btn=f.querySelector('button[type=submit]'),d=f.dataset;
+function say(t,ok){msg.hidden=false;msg.textContent=t;msg.className='kf-msg '+(ok?'ok':'err');}
+if(f.querySelector('.kf-hp').checked)return;
+if(f.hasAttribute('data-preview')){say(d.pre,true);return;}
+var data={},order=[],reply='',bad=false;
+f.querySelectorAll('[data-f]').forEach(function(w){
+var t=w.dataset.t,v='';
+if(t==='checks'){var a=[];w.querySelectorAll('input:checked').forEach(function(i){a.push(i.value);});v=a.join(', ');if(w.dataset.r&&!a.length)bad=true;}
+else if(t==='radio'){var r=w.querySelector('input:checked');v=r?r.value:'';}
+else if(t==='check'){v=w.querySelector('input').checked?w.dataset.y:w.dataset.n;}
+else v=w.querySelector('input,select,textarea').value.trim();
+var base=(w.dataset.l||'?').trim()||'?',l=base,k=2;
+while(RES[l]||Object.prototype.hasOwnProperty.call(data,l)){l=base+' ('+(k++)+')';}
+data[l]=v;order.push(l);
+if(t==='email'&&v&&!reply)reply=v;
+});
+if(bad){say(d.req,false);return;}
+if(d.key){
+btn.disabled=true;
+var o={access_key:d.key,subject:d.subject,from_name:d.site,botcheck:''};
+order.forEach(function(l){o[l]=data[l];});
+if(reply)o.email=reply;
+fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(o)})
+.then(function(r){return r.json();})
+.then(function(j){if(j&&j.success){say(d.ok,true);f.reset();}else say(d.err,false);})
+.catch(function(){say(d.err,false);})
+.then(function(){btn.disabled=false;});
+}else if(d.mail){
+var nl=String.fromCharCode(10);
+var body=order.map(function(l){return l+': '+data[l];}).join(nl);
+say(d.opening,true);
+location.href='mailto:'+d.mail+'?subject='+encodeURIComponent(d.subject)+'&body='+encodeURIComponent(body);
+}else say(d.err,false);
+});});})();</script>
 
 </body>
 </html>

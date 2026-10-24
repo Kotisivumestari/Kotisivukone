@@ -134,6 +134,19 @@ h1.hd{font-size:clamp(2rem,5vw,3rem)}h2.hd{font-size:clamp(1.5rem,3.5vw,2.1rem)}
 .faq p{margin:.75rem 0 0!important}
 .contact-grid .card p{margin:0 0 1.2rem}
 .contact-grid .card p:last-child{margin:0}
+.kform{display:grid;gap:1.1rem}
+.kform .kf{display:grid;gap:.4rem}
+.kform label,.kform legend{font-weight:600;font-size:.92rem}
+.kform fieldset{border:0;margin:0;padding:0;display:grid;gap:.5rem}
+.kform legend{padding:0;margin-bottom:.4rem}
+.kform .kf-opt{display:flex;align-items:center;gap:.55rem;font-weight:400;cursor:pointer}
+.kform .kf-opt input{width:1.1rem;height:1.1rem;accent-color:var(--accent);flex:none}
+.kform .req{color:#dc2626}
+.kform .kf-hp{display:none!important}
+.kform .kf-msg{margin:0;padding:.8rem 1rem;border-radius:.6rem;font-size:.95rem}
+.kform .kf-msg.ok{background:#dcfce7;color:#14532d}.kform .kf-msg.err{background:#fee2e2;color:#7f1d1d}
+.kform button[disabled]{opacity:.6;cursor:wait}
+.kform .btn{justify-self:start}
 
 /* Kuva + teksti päälle */
 .ov{position:relative;display:flex;border-radius:1rem;overflow:hidden;background-size:cover;background-position:center;padding:2rem}
@@ -210,6 +223,8 @@ h1.hd{font-size:clamp(2rem,5vw,3rem)}h2.hd{font-size:clamp(1.5rem,3.5vw,2.1rem)}
 .site-footer{border-top:1px solid var(--line);margin-top:4rem;padding:2rem 0;font-size:.9rem;color:var(--muted)}
 .site-footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem}
 .site-footer nav{display:flex;gap:1.2rem;flex-wrap:wrap}
+.site-footer .foot-info{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:1.5rem;align-items:start;justify-content:stretch;padding-bottom:1.5rem;margin-bottom:1.5rem;border-bottom:1px solid var(--line);line-height:1.5}
+.foot-info strong{color:var(--text)}.foot-info a{color:inherit}
 
 html{font-size:93.75%}
 .btn,.field,.nav-toggle{border-radius:0}.card,.ov,.ph,.consent-ph,.cookie,.blk.has-bg:not(.full){border-radius:0}.ov-box{border-radius:0}
@@ -236,7 +251,7 @@ html{font-size:93.75%}
 <main>
 <div class="blk pad-md"><div class="blk-inner"><div class="narrow-col"><div style="text-align:left"><div class="prose"><h2>Onko nettisivusi vieläkin 90-luvulla?</h2><p>Laitetaan yhdessä nettisivusi 2020-luvulle, edullisesti ja nopeasti. Ole yhteydessä tänään ja sinulla on uusi nettisivu jo seuraavalla viikolla. Kaikki nettisivut rakennetaan toiveitesi perusteella, ilman erikoistoiveita käytetään ainoastaan sinun antamia tietoja.</p></div></div></div></div></div>
 <div class="blk pad-md"><div class="blk-inner"><div class="grid-auto"><div class="card plan"><h3 class="card-title">Perus</h3><div class="price">199 € + alv</div><ul><li>1-3 sivua</li><li>Mobiili ystävällinen sivu</li><li>Some linkitykset</li><li>SEO-linkitykset</li></ul><a class="btn" href="tilaa.html">Valitse</a></div><div class="card plan plan-featured"><h3 class="card-title">Pro</h3><div class="price">299 € + alv</div><ul><li>Samat kuin perus-paketissa</li><li>3-5 sivua</li></ul><a class="btn" href="tilaa.html">Valitse</a></div><div class="card plan"><h3 class="card-title">Luxus</h3><div class="price">Sopimuksen mukaan</div><ul><li>Samat kuin perus-paketissa</li><li>5+ sivua</li><li>Erikois ominaisuuksia sopimuksen mukaan*</li></ul><a class="btn" href="tilaa.html">Valitse</a></div></div><p class="muted center" style="margin-top:2rem">Kaikkiin paketteihin saatavilla 29,99€/kk 30min/kk ylläpito apu. Erikois ominaisuudet sovitaan erikseen.</p></div></div>
-<div class="blk pad-md"><div class="blk-inner"><div class="mq square fade pause" style="--w:17rem;--dur:37s"><div class="mq-track"><div class="mq-set"><div class="mq-it"><img src="images/i3qdsir.png" alt="" loading="lazy"></div><div class="mq-it"><img src="images/7u7nvsi.png" alt="moi" loading="lazy"><span class="mq-cap"><strong>moi</strong><span class="mq-tx">hei</span></span></div><div class="mq-it"><img src="images/i3qdsir.png" alt="" loading="lazy"></div><div class="mq-it"><img src="images/7u7nvsi.png" alt="moi" loading="lazy"><span class="mq-cap"><strong>moi</strong><span class="mq-tx">hei</span></span></div><div class="mq-it"><img src="images/i3qdsir.png" alt="" loading="lazy"></div><div class="mq-it"><img src="images/7u7nvsi.png" alt="moi" loading="lazy"><span class="mq-cap"><strong>moi</strong><span class="mq-tx">hei</span></span></div></div><div class="mq-set" aria-hidden="true"><div class="mq-it"><img src="images/i3qdsir.png" alt="" loading="lazy"></div><div class="mq-it"><img src="images/7u7nvsi.png" alt="" loading="lazy"><span class="mq-cap"><strong>moi</strong><span class="mq-tx">hei</span></span></div><div class="mq-it"><img src="images/i3qdsir.png" alt="" loading="lazy"></div><div class="mq-it"><img src="images/7u7nvsi.png" alt="" loading="lazy"><span class="mq-cap"><strong>moi</strong><span class="mq-tx">hei</span></span></div><div class="mq-it"><img src="images/i3qdsir.png" alt="" loading="lazy"></div><div class="mq-it"><img src="images/7u7nvsi.png" alt="" loading="lazy"><span class="mq-cap"><strong>moi</strong><span class="mq-tx">hei</span></span></div></div></div></div></div></div>
+<div class="blk has-bg pad-md"><div class="blk-layer" style="background:var(--surface);opacity:0.1"></div><div class="blk-inner"><h2 class="hd" style="text-align:center">Referenssit</h2><div class="mq contain fade pause gray" style="--w:20rem;--dur:28s"><div class="mq-track"><div class="mq-set"><div class="mq-it"><img src="images/i3qdsir.png" alt="" loading="lazy"></div><div class="mq-it"><img src="images/7u7nvsi.png" alt="moi" loading="lazy"><span class="mq-cap"><strong>moi</strong><span class="mq-tx">hei</span></span></div><div class="mq-it"><img src="images/7zz7yns.png" alt="" loading="lazy"></div><div class="mq-it"><img src="images/i3qdsir.png" alt="" loading="lazy"></div><div class="mq-it"><img src="images/7u7nvsi.png" alt="moi" loading="lazy"><span class="mq-cap"><strong>moi</strong><span class="mq-tx">hei</span></span></div><div class="mq-it"><img src="images/7zz7yns.png" alt="" loading="lazy"></div></div><div class="mq-set" aria-hidden="true"><div class="mq-it"><img src="images/i3qdsir.png" alt="" loading="lazy"></div><div class="mq-it"><img src="images/7u7nvsi.png" alt="" loading="lazy"><span class="mq-cap"><strong>moi</strong><span class="mq-tx">hei</span></span></div><div class="mq-it"><img src="images/7zz7yns.png" alt="" loading="lazy"></div><div class="mq-it"><img src="images/i3qdsir.png" alt="" loading="lazy"></div><div class="mq-it"><img src="images/7u7nvsi.png" alt="" loading="lazy"><span class="mq-cap"><strong>moi</strong><span class="mq-tx">hei</span></span></div><div class="mq-it"><img src="images/7zz7yns.png" alt="" loading="lazy"></div></div></div></div></div></div>
 </main>
 <footer class="site-footer"><div class="wrap">
   <span>© 2026 KK Visuals. Kaikki oikeudet pidätetään.</span><div class="social s-sm" style="justify-content:flex-start"><a class="soc" href="https://instagram.com/kk_visuals" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></div><nav></nav>
